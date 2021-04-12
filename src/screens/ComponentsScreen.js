@@ -3,7 +3,7 @@ import { Text, StyleSheet, View } from "react-native";
 import { ThemeColors } from "react-navigation";
 
 const ComponentsScreen = () => {
-  const name = <Text>Bee</Text>;
+  const name = "Bee";
 
   return (
     <View>
