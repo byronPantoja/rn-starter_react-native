@@ -8,17 +8,17 @@ const COLOR_INCREMENT = 18;
 const reducer = (state, action) => {
   switch (action.type) {
     case "change_red":
-      state.red + action.payload > 2555 || state.red + action.payload < 0
+      state.red + action.payload > 255 || state.red + action.payload < 0
         ? state
         : { ...state, red: state.red + action.payload };
       return { ...state, red: state.red + action.payload };
     case "change_green":
-      state.green + action.payload > 2555 || state.green + action.payload < 0
+      state.green + action.payload > 255 || state.green + action.payload < 0
         ? state
         : { ...state, green: state.green + action.payload };
       return { ...state, green: state.red + action.payload };
     case "change_blue":
-      state.blue + action.payload > 2555 || state.blue + action.payload < 0
+      state.blue + action.payload > 255 || state.blue + action.payload < 0
         ? state
         : { ...state, blue: state.blue + action.payload };
       return { ...state, blue: state.red + action.payload };
