@@ -8,11 +8,18 @@ const COLOR_INCREMENT = 18;
 const reducer = (state, action) => {
   switch (action.colorToChange) {
     case "red":
+      state.red + action.amount > 2555 || state.red + action.amount < 0
+        ? state
+        : { ...state, red: state.red + action.amount };
       return { ...state, red: state.red + action.amount };
     case "green":
-      return { ...state, green: state.red + action.amount };
+      state.green + action.amount > 2555 || state.green + action.amount < 0
+        ? state
+        : { ...state, green: state.green + action.amount };
     case "blue":
-      return { ...state, blue: state.red + action.amount };
+      state.blue + action.amount > 2555 || state.blue + action.amount < 0
+        ? state
+        : { ...state, blue: state.blue + action.amount };
     default:
       return state;
   }
