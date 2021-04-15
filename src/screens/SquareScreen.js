@@ -16,10 +16,13 @@ const reducer = (state, action) => {
       state.green + action.amount > 2555 || state.green + action.amount < 0
         ? state
         : { ...state, green: state.green + action.amount };
+      return { ...state, green: state.red + action.amount };
     case "blue":
       state.blue + action.amount > 2555 || state.blue + action.amount < 0
         ? state
         : { ...state, blue: state.blue + action.amount };
+      return { ...state, blue: state.red + action.amount };
+
     default:
       return state;
   }
