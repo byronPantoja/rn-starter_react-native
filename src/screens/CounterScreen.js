@@ -5,10 +5,10 @@ const PAYLOAD_VALUE = 1;
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "increase":
+    case "increment":
       state.counter + action.payload;
       return { ...state, counter: state.counter + action.payload };
-    case "decrease":
+    case "decrement":
       state.counter - action.payload;
       return { ...state, counter: state.counter - action.payload };
 
@@ -26,7 +26,7 @@ const CounterScreen = () => {
         title="Increase"
         onPress={() => {
           dispatch({
-            type: "increase",
+            type: "increment",
             payload: PAYLOAD_VALUE,
           });
         }}
@@ -35,7 +35,7 @@ const CounterScreen = () => {
         title="Decrease"
         onPress={() => {
           dispatch({
-            type: "decrease",
+            type: "decrement",
             payload: PAYLOAD_VALUE,
           });
         }}
